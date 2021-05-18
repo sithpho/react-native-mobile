@@ -7,9 +7,9 @@ import {
     TouchableOpacity,
     Text
 } from 'react-native'
-import { SIZES, COLORS } from '../../assets/theme/index'
+import { SIZES, COLORS } from '../assets/theme/index'
 
-const ReactAlert = () => {
+const ReactHook = () => {
 
     const [name, setName] = useState('')
 
@@ -18,7 +18,7 @@ const ReactAlert = () => {
     }
 
     const onAlert = () => {
-        name && alert('Welcome to Sith App , ' + name)
+        name && alert('Welcome box, ' + name)
     }
 
     return (
@@ -26,7 +26,7 @@ const ReactAlert = () => {
             <SafeAreaView>
                 <View>
                     <TextInput
-                        placeholder='Input something please...'
+                        placeholder='Name please...'
                         style={[
                             styles.text_field
                         ]}
@@ -41,26 +41,24 @@ const ReactAlert = () => {
     )
 }
 
-export default ReactAlert
+export default ReactHook
 
 const styles = StyleSheet.create({
     text_field: {
-        marginTop: 320,
-        borderColor: '#089c3e',
-        borderWidth: .9,
+        borderColor: '#000',
+        borderWidth: .3,
         margin: SIZES.base(),
         height: SIZES.height,
         borderRadius: SIZES.radius,
         padding: SIZES.base(1)
     },
     button: {
-        borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: SIZES.base(),
         marginRight: SIZES.base(),
         height: SIZES.height,
-        backgroundColor: COLORS.black
+        backgroundColor: COLORS.base
     },
     textBtn: {
         color: COLORS.while,
